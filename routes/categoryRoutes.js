@@ -18,7 +18,7 @@ router.get("/all", fetchAllCategoriesController);
 // UPDATE CATEGORY
 router.put("/update/:id", authMiddleware, updateCategoryController);
 
-// DELETE A USER
+// DELETE A CATEGORY
 router.delete("/delete/:id", authMiddleware, deleteCategoryController);
 
 module.exports = router;

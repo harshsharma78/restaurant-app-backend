@@ -1,6 +1,6 @@
 const express = require("express");
 const {
-  fetchUserDetailsController,
+  userDetailsController,
   updateUserDetailsController,
   updateUserPasswordController,
   resetUserPasswordController,
@@ -11,7 +11,7 @@ const authMiddleware = require("../middlewares/authMiddleware");
 const router = express.Router();
 
 // FETCH USER DETAILS
-router.get("/fetchDetails", authMiddleware, fetchUserDetailsController);
+router.get("/fetchDetails", authMiddleware, userDetailsController);
 
 // UPDATE USER DETAILS
 router.put("/updateDetails", authMiddleware, updateUserDetailsController);

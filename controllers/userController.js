@@ -2,7 +2,7 @@ const userModel = require("../models/userModel");
 const bcryptjs = require("bcryptjs");
 
 // USER DETAILS | GET
-const fetchUserDetailsController = async (req, res) => {
+const userDetailsController = async (req, res) => {
   try {
     const user = await userModel.findById({ _id: req.body.id });
 
@@ -189,7 +189,7 @@ const deleteUserController = async (req, res) => {
 };
 
 module.exports = {
-  fetchUserDetailsController,
+  userDetailsController,
   updateUserDetailsController,
   updateUserPasswordController,
   resetUserPasswordController,
